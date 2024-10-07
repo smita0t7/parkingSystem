@@ -1,0 +1,50 @@
+-   we have created 2 folders as client and server
+-   client : for frontend data
+-   server : for backend data
+-   install express for backend and react for frontend
+-   add "start": "node server.js",
+    "dev": "nodemon server.js"  in package.json file of server folders
+-   add  "proxy": "http://localhost:5000" in package.json file of client in 4th line.
+-   then set the boiler code for server.js file of server to test the backend
+-   The code : const express = require ("express");
+const app = express();
+
+app.get("/api",(req,res) =>{
+    res.json({
+        "hello world" : ["i am smita"]
+    });
+});
+
+app.listen(5000, ()=>{
+    console.log("Server is running on port 5000");
+})
+
+-   to see the port write localhost:5000/api as api is the endpoint of the port.
+-   now set the boiler code for frontend in app.js file
+-   The code :import react, {useEffect, useState} from "react";
+
+function App(){
+
+const [backendData, setBackendData] = useState([{}])
+
+useEffect(()=>{
+  fetch("/api").then(
+    response => response.json()
+  ).then(
+    data => {
+      setBackendData(data)
+    }
+  )
+}, [])
+
+  return (
+    <div>
+<h1>hello frontend</h1>
+    </div>
+  )
+}
+
+export default App;
+
+-   Now test the code by running server.js in one terminal and run the frontendin another terminal
+-   npm run dev for server.js then split the terminal then run npm start.
