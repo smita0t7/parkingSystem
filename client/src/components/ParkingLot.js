@@ -13,15 +13,18 @@ const ParkingLot = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Parking-Lot</h2>
-            <ul>
+        <div className="container parking-lot-container">
+            <h2>Parking Lot</h2>
+            <ul className="parking-lot-list">
                 {parkingSlots.map((slot) => (
-                    <li key={slot.id}>{slot.number} - {slot.status}</li>
+                    <li key={slot.id}>
+                        {slot.number} - {slot.status}
+                    </li>
                 ))}
             </ul>
         </div>
     );
 };
+
 
 export default ParkingLot;

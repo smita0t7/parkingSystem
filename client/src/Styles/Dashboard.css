@@ -1,0 +1,10 @@
+/* Dashboard Component */
+.dashboard-container h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.dashboard-container p {
+    font-size: 16px;
+    color: #6c757d;
+}

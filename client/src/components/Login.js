@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../Styles/Login.css';
+
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -15,19 +17,19 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div className="container login-container">
             <h2>Login</h2>
-            <input 
-                type="email" 
-                placeholder="Email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
+            <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
-            <input 
-                type="password" 
-                placeholder="Password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
+            <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>Login</button>
         </div>
