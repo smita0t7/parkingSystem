@@ -48,4 +48,4 @@ export default App;
 
 -   Now test the code by running server.js in one terminal and run the frontendin another terminal
 -   npm run dev for server.js then split the terminal then run npm start.
-- If you are using import way to add express then add "type":"module" in ur package.json file of server folder.
+-   If you are using import way to add express then add "type":"module" in ur package.json file of server folder.
