@@ -11,6 +11,11 @@ console.log('Successfully imported ParkingSlotsRoute');  // Add this line to con
 const app = express();
 const PORT = 5000;
 
+
+//connect the database
+connectDB();
+
+
 // Middleware setup
 app.use(cors());
 app.use(bodyParser.json());
